@@ -8,6 +8,8 @@
   <br>
   <a href="https://github.com/dermv/marzbanify-template/tree/main#features">Features</a>
   ·
+  <a href="https://github.com/dermv/marzbanify-template/tree/main#mini-version">mini Version</a>
+  ·
   <a href="https://github.com/dermv/marzbanify-template/tree/main#installation">Installation</a>
   ·
   <a href="https://github.com/dermv/marzbanify-template/tree/main#personalization">Personalization</a>
@@ -21,7 +23,7 @@
   </picture>
 </p>
 
-# Features
+## Features
 
 - The design is simple and intuitive, with minimal code.
 - Theme switching: system, light, and dark modes.
@@ -29,11 +31,28 @@
 - Guides are provided for PC, Android, and iOS.
 - Automatic detection of the user's theme, language, and device.
 
-# Installation
+## mini Version
+Maximum minimalism: just the header and guide, nothing extra.
+<br>
+<a href="https://denisromanov.ru/projects/marzbanify-template-mini-demo">Live demo »</a>
+
+<p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./.github/assets/mini/dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="./.github/assets/mini/light.png">
+    <img alt="Marzbanify Template mini" src="./.github/assets/mini/dark.png">
+  </picture>
+</p>
+
+## Installation
 
 1. Upload the file to the server.
 ```
 sudo wget -O /var/lib/marzban/templates/subscription/index.html https://raw.githubusercontent.com/dermv/marzbanify-template/main/index.html
+```
+For mini version:
+```
+sudo wget -O /var/lib/marzban/templates/subscription/index.html https://raw.githubusercontent.com/dermv/marzbanify-template/main/mini/index.html
 ```
 2. Enter these commands to automatically specify the file path to the subscription page.
 ```
@@ -50,44 +69,51 @@ SUBSCRIPTION_PAGE_TEMPLATE="subscription/index.html"
 marzban restart
 ```
 
-## Host Version
-To use the host version, upload the `sub` folder to the host and change the value of `BASE_URL` to your panel address in the `index.php` file just like the following example.
+## Personalization
+
+To customize, edit the `index.html` file and replace the following default values with your own.
+
+### Main Variables
+
+- Description.
 ```
-const BASE_URL = "https://example.com:port";
+Simple, beautiful, and user-friendly HTML template for Marzban subscription page.
 ```
-
-# Personalization
-
-To customize the favicons, support link, and logo, you need to edit the `index.html` file. Replace the following default values with your own.
-
-Favicons:
+- Title.
+```
+Marzbanify Template
+```
+- Favicons.
 ```
 https://raw.githubusercontent.com/dermv/marzbanify-template/refs/heads/main/img/apple-touch-icon.png
 https://raw.githubusercontent.com/dermv/marzbanify-template/refs/heads/main/img/favicon-16x16.png
 https://raw.githubusercontent.com/dermv/marzbanify-template/refs/heads/main/img/favicon-32x32.png
 ```
-Support link:
+- Support link.
 ```
 https://t.me/
 ```
-Logo:
+- Logo.
 ```
 https://raw.githubusercontent.com/dermv/marzbanify-template/refs/heads/main/img/logo.png
 ```
 
-## Displaying Username
-If you need to display the username, you can replace the subscription title.
-Simply find this line in the file:
-```
-<span class="fs-3 fw-bold me-auto" x-text="$t('subscription')"></span>
-```
-and replace it with:
-```
-<span class="text-break fs-3 fw-bold me-auto">{{ user.username }}</span>
-```
-For host version replace it with:
-```
-<span class="text-break fs-3 fw-bold me-auto"><?= $user['username'] ?></span>
-```
+### Optional Variables
 
-After making changes, save the file and restart Marzban.
+- Defines the default website theme used when the user hasn't selected a different one.
+```
+const DEFAULT_THEME = 'system';
+```
+- URL schemes for quick subscription import.
+```
+const SUB_URL_SCHEMES = {
+  pc: `hiddify://import/${SUB_URL}`,
+  android: `hiddify://import/${SUB_URL}`,
+  ios: `hiddify://import/${SUB_URL}`,
+};
+```
+- Default locale used to display content if the user's locale is not specified.
+```
+const DEFAULT_LOCALE = 'en';
+```
+- Translation data in `const MESSAGES`.

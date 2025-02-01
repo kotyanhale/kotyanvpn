@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Simple, beautiful, and user-friendly HTML template for Marzban subscription page.">
     <meta name="theme-color" content="#fff">
-    <title>Marzbanify Template</title>
+    <title>Marzbanify Template mini</title>
     <script>
       // Color mode toggler.
 
@@ -82,7 +82,6 @@
         --my-content-color: rgba(0, 0, 0, .65);
         --my-dropdown-bg: #fff;
         --my-dropdown-link-hover-bg: rgba(55, 53, 47, .05);
-        --my-modal-bg: #fff;
       }
 
       [data-bs-theme='dark'] {
@@ -98,7 +97,6 @@
         --my-content-color: rgba(255, 255, 255, .55);
         --my-dropdown-bg: #2c2c2c;
         --my-dropdown-link-hover-bg: rgba(255, 255, 255, .05);
-        --my-modal-bg: #232323;
       }
 
       .bi {
@@ -115,10 +113,6 @@
         margin-right: -3px;
         margin-left: 3px;
         background-color: currentColor;
-      }
-
-      .modal-backdrop {
-        --bs-backdrop-opacity: .75;
       }
 
       .my-container {
@@ -238,9 +232,7 @@
       }
 
       .my-btn-primary,
-      .my-btn-secondary,
-      .my-btn-neutral,
-      .my-btn-outline {
+      .my-btn-secondary {
         --bs-btn-padding-x: .85rem;
         --bs-btn-padding-y: .25rem;
         --bs-btn-color: #fff;
@@ -267,99 +259,15 @@
         --bs-btn-active-bg: rgba(25, 125, 225, .25);
         --bs-btn-active-border-color: transparent;
       }
-
-      .my-btn-neutral {
-        --bs-btn-bg: rgb(50, 50, 50);
-        --bs-btn-hover-bg: rgb(65, 65, 65);
-        --bs-btn-focus-shadow-rgb: var(--my-emphasis-focus-shadow-rgb);
-        --bs-btn-active-bg: rgb(75, 75, 75);
-        --bs-btn-disabled-color: #fff;
-        --bs-btn-disabled-bg: rgb(50, 50, 50);
-        --bs-btn-disabled-border-color: transparent;
-      }
-
-      .my-btn-outline {
-        --bs-btn-color: var(--my-heading-color);
-        --bs-btn-bg: transparent;
-        --bs-btn-border-color: var(--my-alpha-dark-gray-color);
-        --bs-btn-hover-color: var(--my-heading-color);
-        --bs-btn-hover-bg: var(--my-gray-color);
-        --bs-btn-hover-border-color: var(--my-alpha-dark-gray-color);
-        --bs-btn-focus-shadow-rgb: var(--my-emphasis-focus-shadow-rgb);
-        --bs-btn-active-color: var(--my-heading-color);
-        --bs-btn-active-bg: var(--my-dark-gray-color);
-        --bs-btn-active-border-color: var(--my-alpha-dark-gray-color);
-      }
-
-      .my-modal {
-        --bs-modal-margin: 1rem;
-        --bs-modal-bg: var(--my-modal-bg);
-        --bs-modal-border-width: 0;
-        --bs-modal-border-radius: var(--bs-border-radius-xl);
-        --bs-modal-header-padding: 1.5rem 1.5rem 0;
-        --bs-modal-header-border-width: 0;
-      }
-
-      @media (min-width: 576px) {
-        .my-modal {
-          --bs-modal-padding: 2rem;
-        }
-      }
-
-      .my-modal .modal-dialog {
-        max-width: 420px;
-      }
-
-      .my-modal .modal-content {
-        padding-bottom: 1.5rem;
-      }
-
-      #qr-code canvas {
-        width: 100%;
-        max-width: 240px;
-        margin-top: .5rem;
-        border-radius: var(--bs-border-radius-xl);
-      }
-
-      @media (max-width: 320px) {
-        .my-row-xs > * {
-          width: 100%;
-        }
-      }
       
-      .my-block,
       .my-block-big {
         border-radius: var(--bs-border-radius-xl);
         background-color: var(--my-gray-color);
-      }
-
-      .my-block {
-        padding: 1rem;
-      }
-      
-      .my-block .bi {
-        font-size: 1.5rem;
       }
       
       .my-block-big {
         padding: 1.5rem;
         padding-top: .75rem;
-      }
-
-      .my-text-blue {
-        color: #0a85d1;
-      }
-
-      .my-text-green {
-        color: #1aad3a;
-      }
-      
-      .my-text-red {
-        color: #ea4e43;
-      }
-      
-      .my-text-yellow {
-        color: #fb3;
       }
       
       .my-text-heading {
@@ -399,24 +307,11 @@
       <symbol id="apple" viewBox="0 0 16 16">
         <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
       </symbol>
-      <symbol id="arrow-down-up" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5m-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5"/>
-      </symbol>
-      <symbol id="calendar3" viewBox="0 0 16 16">
-        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"/>
-        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-      </symbol>
       <symbol id="check-lg" viewBox="0 0 16 16">
         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
       </symbol>
       <symbol id="circle-half" viewBox="0 0 16 16">
         <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
-      </symbol>
-      <symbol id="emoji-frown-fill" viewBox="0 0 16 16">
-        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m-2.715 5.933a.5.5 0 0 1-.183-.683A4.5 4.5 0 0 1 8 9.5a4.5 4.5 0 0 1 3.898 2.25.5.5 0 0 1-.866.5A3.5 3.5 0 0 0 8 10.5a3.5 3.5 0 0 0-3.032 1.75.5.5 0 0 1-.683.183M10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8"/>
-      </symbol>
-      <symbol id="emoji-smile-fill" viewBox="0 0 16 16">
-        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5M4.285 9.567a.5.5 0 0 1 .683.183A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8"/>
       </symbol>
       <symbol id="moon-stars-fill" viewBox="0 0 16 16">
         <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
@@ -424,9 +319,6 @@
       </symbol>
       <symbol id="pc-display" viewBox="0 0 16 16">
         <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4q0 1 .25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75Q6 13 6 12H2s-2 0-2-2zm1.398-.855a.76.76 0 0 0-.254.302A1.5 1.5 0 0 0 1 4.01V10c0 .325.078.502.145.602q.105.156.302.254a1.5 1.5 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.76.76 0 0 0 .254-.302 1.5 1.5 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.76.76 0 0 0-.302-.254A1.5 1.5 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145"/>
-      </symbol>
-      <symbol id="person-fill" viewBox="0 0 16 16">
-        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
       </symbol>
       <symbol id="sun-fill" viewBox="0 0 16 16">
         <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
@@ -509,63 +401,6 @@
       </div>
     </header>
     <div class="container my-container px-3 pb-3" x-data>
-      <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-        <h4 class="my-text-heading fw-bold me-auto mb-0" x-text="$t('subscription')"></h4>
-        <button class="btn my-btn-outline" data-bs-toggle="modal" data-bs-target="#get-link-modal" x-text="$t('getLink')"></button>
-        <div class="modal my-modal fade" id="get-link-modal" tabindex="-1">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="btn-close my-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body text-center" x-data="copyLink">
-                <div class="mb-4" id="qr-code"></div>
-                <h4 class="my-text-heading fw-semibold" x-text="$t('getLinkModalTitle')"></h4>
-                <p class="my-text-content" x-text="$t('getLinkModalSubtitle')"></p>
-                <button class="btn my-btn-neutral" @click="copyToClipboard" :disabled="isDisabled" x-text="isDisabled ? $t('copied') : $t('copyLink')"></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row my-row-xs row-cols-2 row-cols-md-4 g-3 mb-5">
-        <div class="col">
-          <div class="my-block" x-data="blockName">
-            <div class="d-flex flex-row flex-sm-column align-items-center align-items-sm-start mb-1 mb-sm-0">
-              <svg class="bi my-text-blue me-2 mb-0 mb-sm-2"><use href="#person-fill"></use></svg>
-              <h5 class="my-text-heading mb-0" x-text="$t('name')"></h5>
-            </div>
-            <p class="text-truncate my-text-content mb-0" x-text="getText"></p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="my-block" x-data="blockStatus">
-            <div class="d-flex flex-row flex-sm-column align-items-center align-items-sm-start mb-1 mb-sm-0">
-              <svg class="bi my-text-green me-2 mb-0 mb-sm-2"><use :href="getIcon"></use></svg>
-              <h5 class="my-text-heading mb-0" x-text="$t('status')"></h5>
-            </div>
-            <p class="text-truncate my-text-content mb-0" x-text="getText"></p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="my-block" x-data="blockDuration">
-            <div class="d-flex flex-row flex-sm-column align-items-center align-items-sm-start mb-1 mb-sm-0">
-              <svg class="bi my-text-red me-2 mb-0 mb-sm-2"><use href="#calendar3"></use></svg>
-              <h5 class="my-text-heading mb-0" x-text="$t('duration')"></h5>
-            </div>
-            <p class="text-truncate my-text-content mb-0" x-text="getText"></p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="my-block" x-data="blockTraffic">
-            <div class="d-flex flex-row flex-sm-column align-items-center align-items-sm-start mb-1 mb-sm-0">
-              <svg class="bi my-text-yellow me-2 mb-0 mb-sm-2"><use href="#arrow-down-up"></use></svg>
-              <h5 class="my-text-heading mb-0" x-text="$t('traffic')"></h5>
-            </div>
-            <p class="text-truncate my-text-content mb-0" x-text="getText"></p>
-          </div>
-        </div>
-      </div>
       <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
         <h4 class="my-text-heading fw-bold me-auto mb-0" x-text="$t('guide')"></h4>
         <div class="dropdown my-dropdown">
@@ -707,7 +542,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs-i18n@2.x.x/dist/cdn.min.js"></script>
-    <script src="https://unpkg.com/qr-code-styling@1.9.1/lib/qr-code-styling.js"></script>
     <script>
       const SUB_URL = window.location.href;
 
@@ -727,22 +561,6 @@
           system: 'System',
           light: 'Light',
           dark: 'Dark',
-          name: 'Name',
-          status: 'Status',
-          active: 'Active',
-          limited: 'Limited',
-          expired: 'Expired',
-          disabled: 'Disabled',
-          duration: 'Duration',
-          until: 'Until',
-          forever: 'Forever',
-          traffic: 'Traffic',
-          subscription: 'Subscription',
-          getLink: 'Get link',
-          getLinkModalTitle: 'Scan the QR code above in the client',
-          getLinkModalSubtitle: 'Simple subscription addition in any client. Another option: copy the link below and paste it into the client',
-          copyLink: 'Copy link',
-          copied: 'Copied',
           guide: 'Guide',
           pc: 'PC',
           openInApp: 'Open in {app}',
@@ -797,22 +615,6 @@
           system: '系统',
           light: '浅色',
           dark: '深色',
-          name: '名字',
-          status: '状态',
-          active: '激活',
-          limited: '受限',
-          expired: '已过期',
-          disabled: '已禁用',
-          duration: '持续时间',
-          until: '直到',
-          forever: '永久',
-          traffic: '流量',
-          subscription: '订阅',
-          getLink: '获取链接',
-          getLinkModalTitle: '在客户端扫描上方二维码',
-          getLinkModalSubtitle: '简单地在任何客户端添加订阅。还有另一种方法：复制下面的链接并粘贴到客户端中。',
-          copyLink: '复制链接',
-          copied: '已复制',
           guide: '指南',
           pc: '电脑',
           openInApp: '在 {app} 中打开',
@@ -867,22 +669,6 @@
           system: 'Системная',
           light: 'Светлая',
           dark: 'Темная',
-          name: 'Имя',
-          status: 'Статус',
-          active: 'Активна',
-          limited: 'Ограничена',
-          expired: 'Истекла',
-          disabled: 'Отключена',
-          duration: 'Срок',
-          until: 'До',
-          forever: 'Навсегда',
-          traffic: 'Трафик',
-          subscription: 'Подписка',
-          getLink: 'Получить ссылку',
-          getLinkModalTitle: 'Отсканируй QR-код выше в клиенте',
-          getLinkModalSubtitle: 'Простое добавление подписки в любой клиент. Есть и другой вариант: скопируй ссылку ниже и вставь в клиент',
-          copyLink: 'Скопировать ссылку',
-          copied: 'Скопировано',
           guide: 'Инструкция',
           pc: 'ПК',
           openInApp: 'Открыть в {app}',
@@ -996,96 +782,7 @@
         );
       });
 
-      document.addEventListener('alpine:init', () => {
-        Alpine.data('copyLink', () => ({
-          isDisabled: false,
-          copyToClipboard() {
-            navigator.clipboard.writeText(SUB_URL)
-            this.isDisabled = true;
-            setTimeout(() => {
-              this.isDisabled = false;
-            }, 3000);
-          },
-        }));
-
-        Alpine.data('blockName', () => ({
-          username: '{{ user.username }}',
-          getText() {
-            if (!this.username.startsWith('{')) {
-              return this.username;
-            } else {
-              return 'Unknown';
-            }
-          },
-        }));
-
-        Alpine.data('blockStatus', () => ({
-          statusValue: '{{ user.status.value }}',
-          getIcon() {
-            if (this.statusValue == 'active' ||
-                this.statusValue.startsWith('{')) {
-              return '#emoji-smile-fill';
-            } else {
-              return '#emoji-frown-fill';
-            }
-          },
-          getText() {
-            if (this.statusValue == 'active') {
-              return AlpineI18n.t('active');
-            } else if (this.statusValue == 'limited') {
-              return AlpineI18n.t('limited');
-            } else if (this.statusValue == 'expired') {
-              return AlpineI18n.t('expired');
-            } else if (this.statusValue == 'disabled') {
-              return AlpineI18n.t('disabled');
-            } else if (this.statusValue.startsWith('{')) {
-              return 'Unknown';
-            }
-          },
-        }));
-
-        Alpine.data('blockDuration', () => ({
-          expire: '{% if user.expire %}{{ user.expire | datetime }}{% endif %}',
-          getText() {
-            if (!this.expire) {
-              return AlpineI18n.t('forever');
-            } else if (!this.expire.startsWith('{')) {
-              const date = new Date(this.expire).toLocaleDateString();
-              return `${AlpineI18n.t('until')} ${date}`;
-            } else {
-              return 'Unknown';
-            }
-          },
-        }));
-
-        Alpine.data('blockTraffic', () => ({
-          usedTraffic: '{{ user.used_traffic | bytesformat }}',
-          dataLimit: '{% if user.data_limit %}{{ user.data_limit | bytesformat }}{% endif %}',
-          getText() {
-            if (!this.dataLimit) {
-              return `${this.usedTraffic} / ∞`;
-            } else if (!this.dataLimit.startsWith('{')) {
-              return `${this.usedTraffic} / ${this.dataLimit}`;
-            } else {
-              return 'Unknown';
-            }
-          },
-        }));
-      });
-
       document.addEventListener('DOMContentLoaded', () => {
-        const qrCode = new QRCodeStyling({
-          data: SUB_URL,
-          margin: 6,
-          dotsOptions: {
-            type: 'extra-rounded',
-          },
-          cornersSquareOptions: {
-            type: 'extra-rounded',
-          },
-        });
-        qrCode.append(document.getElementById('qr-code'));
-
         const btnGuide = document.getElementById('btn-guide');
         document.querySelectorAll('.my-dropdown-item-guide').forEach(item => {
           item.addEventListener('click', () => {
