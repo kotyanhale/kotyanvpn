@@ -114,11 +114,11 @@
         margin-inline-start: 3px;
         background-color: currentColor;
       }
-	  
-	  .ms-auto {
+
+      .ms-auto {
+        margin-inline-start: auto !important;
         margin-left: 0 !important;
-		margin-inline-start: auto !important;
-	  }
+      }
 
       .my-container {
         max-width: 1024px;
@@ -388,14 +388,14 @@
                   </button>
                 </li>
                 <li>
-                  <button class="dropdown-item my-dropdown-item-lang" type="button" data-locale="zh" aria-pressed="false">
-                    <span>中文</span>
+                  <button class="dropdown-item my-dropdown-item-lang" type="button" data-locale="ru" aria-pressed="false">
+                    <span>Русский</span>
                     <svg class="bi my-dropdown-item-check"><use href="#check-lg"></use></svg>
                   </button>
                 </li>
                 <li>
-                  <button class="dropdown-item my-dropdown-item-lang" type="button" data-locale="ru" aria-pressed="false">
-                    <span>Русский</span>
+                  <button class="dropdown-item my-dropdown-item-lang" type="button" data-locale="zh" aria-pressed="false">
+                    <span>中文</span>
                     <svg class="bi my-dropdown-item-check"><use href="#check-lg"></use></svg>
                   </button>
                 </li>
@@ -621,60 +621,6 @@
             },
           },
         },
-        zh: {
-          support: '支持',
-          system: '系统',
-          light: '浅色',
-          dark: '深色',
-          guide: '指南',
-          pc: '电脑',
-          openInApp: '在 {app} 中打开',
-          addSubscription: '添加订阅',
-          guideContent: {
-            android: {
-              first: {
-                title: '安装并打开 Hiddify',
-                text: `在 Google Play 页面打开并安装应用程序。启动应用，选择区域 <b>俄罗斯</b>，然后点击 <b>开始</b>。`,
-              },
-              second: {
-                title: '添加订阅',
-                text: `点击下方按钮 — 应用程序将打开并自动添加订阅。如果未成功，请关闭应用程序并重试。`,
-              },
-              third: {
-                title: '连接并享受',
-                text: `在主界面点击中心的大开关按钮以连接到 VPN。如有需要，可以通过点击底部的「>」图标选择其他服务器。尽情享受 :)`,
-              },
-            },
-            ios: {
-              first: {
-                title: '安装并打开 Hiddify',
-                text: `在 App Store 页面打开并安装应用程序。启动后，在 VPN 配置权限窗口点击 <b>允许</b>，然后输入您的密码。选择区域 <b>俄罗斯</b>，然后点击 <b>开始</b>。`,
-              },
-              second: {
-                title: '添加订阅',
-                text: `点击下方按钮，在弹出窗口中点击 <b>打开</b> — 应用程序将打开并自动添加订阅。如果未成功，请关闭应用程序并重试。`,
-              },
-              third: {
-                title: '连接并享受',
-                text: `在主界面点击中心的大开关按钮以连接到 VPN。如有需要，可以通过点击底部的「>」图标选择其他服务器。尽情享受 :)`,
-              },
-            },
-            pc: {
-              first: {
-                title: '安装并打开 Hiddify',
-                text: `安装应用程序。启动应用，选择区域 <b>俄罗斯</b>，然后点击 <b>开始</b>。`,
-              },
-              second: {
-                title: '添加订阅',
-                text: `点击下方按钮 — 应用程序将打开并自动添加订阅。如果未成功，请关闭应用程序并重试。`,
-              },
-              third: {
-                title: '连接并享受',
-                text: `在主界面点击中心的大开关按钮以连接到 VPN。如有需要，可以在<b>代理</b>部分选择其他服务器。尽情享受 :)`,
-              },
-            },
-          },
-        },
         ru: {
           support: 'Поддержка',
           system: 'Системная',
@@ -729,7 +675,61 @@
             },
           },
         },
-		fa: {
+        zh: {
+          support: '支持',
+          system: '系统',
+          light: '浅色',
+          dark: '深色',
+          guide: '指南',
+          pc: '电脑',
+          openInApp: '在 {app} 中打开',
+          addSubscription: '添加订阅',
+          guideContent: {
+            android: {
+              first: {
+                title: '安装并打开 Hiddify',
+                text: `在 Google Play 页面打开并安装应用程序。启动应用，选择区域 <b>俄罗斯</b>，然后点击 <b>开始</b>。`,
+              },
+              second: {
+                title: '添加订阅',
+                text: `点击下方按钮 — 应用程序将打开并自动添加订阅。如果未成功，请关闭应用程序并重试。`,
+              },
+              third: {
+                title: '连接并享受',
+                text: `在主界面点击中心的大开关按钮以连接到 VPN。如有需要，可以通过点击底部的「>」图标选择其他服务器。尽情享受 :)`,
+              },
+            },
+            ios: {
+              first: {
+                title: '安装并打开 Hiddify',
+                text: `在 App Store 页面打开并安装应用程序。启动后，在 VPN 配置权限窗口点击 <b>允许</b>，然后输入您的密码。选择区域 <b>俄罗斯</b>，然后点击 <b>开始</b>。`,
+              },
+              second: {
+                title: '添加订阅',
+                text: `点击下方按钮，在弹出窗口中点击 <b>打开</b> — 应用程序将打开并自动添加订阅。如果未成功，请关闭应用程序并重试。`,
+              },
+              third: {
+                title: '连接并享受',
+                text: `在主界面点击中心的大开关按钮以连接到 VPN。如有需要，可以通过点击底部的「>」图标选择其他服务器。尽情享受 :)`,
+              },
+            },
+            pc: {
+              first: {
+                title: '安装并打开 Hiddify',
+                text: `安装应用程序。启动应用，选择区域 <b>俄罗斯</b>，然后点击 <b>开始</b>。`,
+              },
+              second: {
+                title: '添加订阅',
+                text: `点击下方按钮 — 应用程序将打开并自动添加订阅。如果未成功，请关闭应用程序并重试。`,
+              },
+              third: {
+                title: '连接并享受',
+                text: `在主界面点击中心的大开关按钮以连接到 VPN。如有需要，可以在<b>代理</b>部分选择其他服务器。尽情享受 :)`,
+              },
+            },
+          },
+        },
+        fa: {
           support: 'پشتیبانی',
           system: 'سیستم',
           light: 'روشن',
@@ -785,18 +785,6 @@
         },
       };
 
-      function getTabIdByDevice() {
-        const userAgent = navigator.userAgent.toLowerCase();
-        if (userAgent.includes('android')) {
-          return '#tab-android';
-        } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
-          return '#tab-ios';
-        } else {
-          return '#tab-pc';
-        }
-      }
-	  
-      // Change CSS style between RTL and LTR
       function updateDirectionAndStyles(language) {
         const html = document.documentElement;
         if (['ar', 'he', 'fa'].includes(language)) {
@@ -811,6 +799,7 @@
           );
         }
       }
+
       function switchStylesheet(newStylesheetHref) {
         const existingLink = document.getElementById('dynamic-stylesheet');
         if (existingLink) {
@@ -820,7 +809,7 @@
           link.rel = 'stylesheet';
           link.id = 'dynamic-stylesheet';
           link.href = newStylesheetHref;
-		  link.crossOrigin = 'anonymous';
+          link.crossOrigin = 'anonymous';
           document.head.appendChild(link);
         }
       }
@@ -831,6 +820,17 @@
           (navigator.language || navigator.userLanguage).split('-')[0]
         );
         return userLocale in MESSAGES ? userLocale : DEFAULT_LOCALE;
+      }
+
+      function getTabIdByDevice() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        if (userAgent.includes('android')) {
+          return '#tab-android';
+        } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
+          return '#tab-ios';
+        } else {
+          return '#tab-pc';
+        }
       }
 
       function showActiveDropdownItem(btn, newItem, prevItem) {
@@ -855,16 +855,16 @@
       document.addEventListener('alpine-i18n:ready', () => {
         window.AlpineI18n.fallbackLocale = 'en';
         window.AlpineI18n.create(getUserLocale(), MESSAGES);
-		document.documentElement.setAttribute('lang', getUserLocale());
-		updateDirectionAndStyles(getUserLocale());
+        document.documentElement.setAttribute('lang', getUserLocale());
+        updateDirectionAndStyles(getUserLocale());
 
         const btnLang = document.getElementById('btn-lang');
         document.querySelectorAll('.my-dropdown-item-lang').forEach(item => {
           item.addEventListener('click', () => {
             localStorage.setItem('locale', item.dataset.locale);
             AlpineI18n.locale = item.dataset.locale;
-			updateDirectionAndStyles(item.dataset.locale);
-			document.documentElement.setAttribute('lang', item.dataset.locale);
+            updateDirectionAndStyles(item.dataset.locale);
+            document.documentElement.setAttribute('lang', item.dataset.locale);
             showActiveDropdownItem(
               btnLang,
               item,
