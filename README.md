@@ -10,7 +10,7 @@
   ·
   <a href="https://github.com/dermv/marzbanify-template/tree/main#mini-version">mini Version</a>
   ·
-  <a href="https://github.com/dermv/marzbanify-template/tree/main#installation">Installation</a>
+  <a href="https://github.com/dermv/marzbanify-template/tree/main#install">Install</a>
   ·
   <a href="https://github.com/dermv/marzbanify-template/tree/main#personalization">Personalization</a>
 </p>
@@ -23,97 +23,97 @@
   </picture>
 </p>
 
+
 ## Features
 
-- The design is simple and intuitive, with minimal code.
-- Theme switching: system, light, and dark modes.
-- Language switching: English, Russian, Chinese, and Persian.
-- Guides are provided for PC, Android, and iOS.
-- Automatic detection of the user's theme, language, and device.
+- Clean and intuitive design with minimal code
+- System, light, and dark theme modes
+- Multi-language support: English, Russian, Chinese, Persian
+- Step-by-step guides for PC, Android, and iOS
+- Automatic detection of user preferences: theme, language, and device
+
 
 ## mini Version
-Maximum minimalism: just the header and guide, nothing extra.
+Pure minimalism. Just the header and step-by-step guide.
 <br>
 <a href="https://denisromanov.ru/projects/marzbanify-template-mini-demo">Live demo »</a>
 
-<p>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./.github/assets/mini/dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="./.github/assets/mini/light.png">
-    <img alt="Marzbanify Template mini" src="./.github/assets/mini/dark.png">
-  </picture>
-</p>
+<details>
+  <summary>Preview</summary>
+  <p>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./.github/assets/mini/dark.png">
+      <source media="(prefers-color-scheme: light)" srcset="./.github/assets/mini/light.png">
+      <img alt="Marzbanify Template mini" src="./.github/assets/mini/dark.png">
+    </picture>
+  </p>
+</details>
 
-## Installation
 
-1. Upload the file to the server.
+## Install
+
+### 1. Upload the template file to the server
+
+Choose the version and run the corresponding command.
+
+**Main version:**
 ```
 sudo wget -O /var/lib/marzban/templates/subscription/index.html https://raw.githubusercontent.com/dermv/marzbanify-template/main/index.html
 ```
-For mini version:
+
+**Mini version:**
 ```
 sudo wget -O /var/lib/marzban/templates/subscription/index.html https://raw.githubusercontent.com/dermv/marzbanify-template/main/mini/index.html
 ```
-2. Enter these commands to automatically specify the file path to the subscription page.
+
+### 2. Configure the subscription page path
+
+**Automatically**
+
+Run these commands to set the path:
 ```
 echo 'CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"' | sudo tee -a /opt/marzban/.env
 echo 'SUBSCRIPTION_PAGE_TEMPLATE="subscription/index.html"' | sudo tee -a /opt/marzban/.env
 ```
-Or specify them manually by editing the Marzban `.env` file.
+
+**Manually**
+
+Edit the Marzban `.env` file and add the following lines:
 ```
 CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"
 SUBSCRIPTION_PAGE_TEMPLATE="subscription/index.html"
 ```
-3. Restart Marzban to apply the changes.
+
+### 3. Restart Marzban
+
+Apply the changes by restarting Marzban:
 ```
 marzban restart
 ```
 
 ## Personalization
 
-To customize, edit the `index.html` file and replace the following default values with your own.
+To personalize, edit the `index.html` file.
 
-### Main Variables
+### Main Values
 
-- Description.
-```
-Simple, beautiful, and user-friendly HTML template for Marzban subscription page.
-```
-- Title.
-```
-Marzbanify Template
-```
-- Favicons.
-```
-https://raw.githubusercontent.com/dermv/marzbanify-template/refs/heads/main/img/apple-touch-icon.png
-https://raw.githubusercontent.com/dermv/marzbanify-template/refs/heads/main/img/favicon-16x16.png
-https://raw.githubusercontent.com/dermv/marzbanify-template/refs/heads/main/img/favicon-32x32.png
-```
-- Support link.
-```
-https://t.me/
-```
-- Logo.
-```
-https://raw.githubusercontent.com/dermv/marzbanify-template/refs/heads/main/img/logo.png
-```
+Find and replace these default values with your own.
+
+| Name         | Value                                                                               |
+|--------------|-------------------------------------------------------------------------------------|
+| Description  | `Simple, beautiful, and user-friendly HTML template for Marzban subscription page.` |
+| Title        | `Marzbanify Template`                                                               |
+| Favicons     | `apple-touch-icon.png`, `favicon-16x16.png`, `favicon-32x32.png`                    |
+| Logo         | `logo.png`                                                                          |
+| Support link | `https://t.me/`                                                                     |
 
 ### Optional Variables
 
-- Defines the default website theme used when the user hasn't selected a different one.
-```
-const DEFAULT_THEME = 'system';
-```
-- URL schemes for quick subscription import.
-```
-const SUB_URL_SCHEMES = {
-  pc: `hiddify://import/${SUB_URL}`,
-  android: `hiddify://import/${SUB_URL}`,
-  ios: `hiddify://import/${SUB_URL}`,
-};
-```
-- Default locale used to display content if the user's locale is not specified.
-```
-const DEFAULT_LOCALE = 'en';
-```
-- Translation data in `const MESSAGES`.
+These variables allow further personalization.
+
+| Variable          | Description                                                 |
+|-------------------|-------------------------------------------------------------|
+| `DEFAULT_THEME`   | Default website theme (`system`, `light`, `dark`)           |
+| `SUB_URL_SCHEMES` | URL schemes for quick subscription import                   |
+| `DEFAULT_LOCALE`  | Default locale for content display (`en`, `ru`, `zh`, `fa`) |
+| `MESSAGES`        | Translation data for multi-language support                 |
